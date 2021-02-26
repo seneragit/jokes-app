@@ -1,6 +1,7 @@
 package com.senera.senerajokesapp.service;
 
-import guru.springframework.norris.chuck.ChuckNorrisQuotes;
+
+import com.senera.senerajokesapp.model.JokeQutotes;
 import org.springframework.stereotype.Service;
 
 /**
@@ -10,14 +11,14 @@ import org.springframework.stereotype.Service;
 @Service
 public class JokeServiceImpl implements JokeService {
 
-    private final ChuckNorrisQuotes chuckNorrisQuotes;
+    private final JokeQutotes jokeQutotes;
 
     public JokeServiceImpl() {
-        this.chuckNorrisQuotes = new ChuckNorrisQuotes();
+        this.jokeQutotes = new JokeQutotes();
     }
 
     @Override
     public String getJoke() {
-        return chuckNorrisQuotes.getRandomQuote();
+        return jokeQutotes.getRandomQuote();
     }
 }
