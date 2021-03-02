@@ -13,8 +13,9 @@ public class JokeServiceImpl implements JokeService {
 
     private final JokeQutotes jokeQutotes;
 
-    public JokeServiceImpl() {
-        this.jokeQutotes = new JokeQutotes();
+
+    public JokeServiceImpl(JokeQutotes jokeQutotes) {
+        this.jokeQutotes = jokeQutotes;
     }
 
     @Override
